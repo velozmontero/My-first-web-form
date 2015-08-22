@@ -9,48 +9,48 @@
 <body>
 	<script>
 		function isValidName(name) {
-			var pattern= new RegExp(/^[a-z]{2,100}$/ig);
-			return pattern.test(name);
-		}
-		
-		function isValidEmail(address) {
-			var pattern= new RegExp(/^\w{2,100}@\w{2,100}.\w{1,4}$/ig);
-			return pattern.test(address);
-		}
-		
-		function isValidPhone(phoneNum) {
-			var phone= /^[0-9]{3}\)?[-. ][0-9]{3}?[-. ][0-9]{4}$/;
-			return phone.test(phoneNum);
-		}
-		/*
-		function validateFeedback(){
-		var phone = document.getElementById("phone");
-		var RE = /^[\d\.\-]+$/;
-		if(!RE.test(phone.value))
-		{
-			alert("You have entered an invalid phone number");
-			return false;
-		}
-		return true;
-	}
-		*/
-		function validateForm(theForm) { 
-			var fName= theForm.firstName.value;
-			var lName= theForm.lastName.value;
-			if (!isValidName(fName) || !isValidlName(lName)) {
-				alert("Please enter a valid First and Last name");
-			}
-			var email= theForm.email.value;
-			if (!isValidlEmail(email)) {
-				alert("Enter a valid email");
-			return false;
-			}
-			var phone= theForm.phoneNum.value;
-			if (!isValidPhone(phone)) {
-				alert("Enter a valid Phone Number");
-			return false;
-			}
-		}
+            var pattern = new RegExp(/^[a-z]{2,100}$/ig);
+            return pattern.test(name);
+        }
+
+        function isValidEmail(address) {
+            var pattern = new RegExp(/^\w{2,100}@\w{2,100}.\w{1,4}$/ig);
+            return pattern.test(address);
+        }
+
+        function isValidPhone(phoneNum) {
+            var phone = /^[0-9]{3}\[-. ][0-9]{3}[-. ][0-9]{4}$/;
+            return phone.test(phoneNum);
+        }
+        /*
+                function validateFeedback(){
+                var phone = document.getElementById("phone");
+                var RE = /^[\d\.\-]+$/;
+                if(!RE.test(phone.value))
+                {
+                    alert("You have entered an invalid phone number");
+                    return false;
+                }
+                return true;
+            }
+                */
+        function validateForm(theForm) {
+            var fName = theForm.firstName.value;
+            var lName = theForm.lastName.value;
+            if (!isValidName(fName) || !isValidlName(lName)) {
+                alert("Please enter a valid First and Last name");
+            }
+            var email = theForm.email.value;
+            if (!isValidlEmail(email)) {
+                alert("Enter a valid email");
+                return false;
+            }
+            var phone = theForm.phoneNum.value;
+            if (!isValidPhone(phone)) {
+                alert("Enter a valid Phone Number");
+                return false;
+            }
+        }
 		
 	</script>
 	<div class="jumbotron col-sm-6 col-sm-push-3 col-xs-12">
