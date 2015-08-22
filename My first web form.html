@@ -19,7 +19,7 @@
 		}
 		
 		function isValidPhone(phoneNum) {
-			var phone= /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			var phone= /^[0-9]{3}\)?[-. ][0-9]{3}?[-. ][0-9]{4}$/;
 			return phone.test(phoneNum);
 		}
 		/*
